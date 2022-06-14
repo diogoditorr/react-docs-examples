@@ -3,6 +3,8 @@ import { Link, Route, Routes } from "react-router-dom";
 import "./App.css";
 import FilterableProductTable from "./components/FilterableProductTable/FilterableProductTable";
 import HomeButtonWrapper from "./components/HomeButtonWrapper";
+import Toolbar from "./components/RespondingToEvents/Toolbar";
+import Gallery from "./components/States/Gallery";
 
 const PRODUCTS = [
     { category: "Fruits", price: "$1", stocked: true, name: "Apple" },
@@ -34,6 +36,12 @@ function App() {
                             <li>
                                 <Link to="filter-table">filter-table</Link>
                             </li>
+                            <li>
+                                <Link to="responding-events">responding-events</Link>
+                            </li>
+                            <li>
+                                <Link to="states">states</Link>
+                            </li>
                         </ul>
                     }
                 />
@@ -42,6 +50,22 @@ function App() {
                     element={
                         <HomeButtonWrapper>
                             <FilterableProductTable products={PRODUCTS} />
+                        </HomeButtonWrapper>
+                    }
+                />
+                <Route
+                    path="responding-events"
+                    element={
+                        <HomeButtonWrapper>
+                            <Toolbar />
+                        </HomeButtonWrapper>
+                    }
+                />
+                <Route
+                    path="states"
+                    element={
+                        <HomeButtonWrapper>
+                            <Gallery />
                         </HomeButtonWrapper>
                     }
                 />
