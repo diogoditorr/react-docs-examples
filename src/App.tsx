@@ -4,6 +4,8 @@ import "./App.css";
 import FilterableProductTable from "./components/FilterableProductTable/FilterableProductTable";
 import HomeButtonWrapper from "./components/HomeButtonWrapper";
 import Toolbar from "./components/RespondingToEvents/Toolbar";
+import Counter from "./components/StateAsSnapshot/Counter";
+import Form from "./components/StateAsSnapshot/Form";
 import Gallery from "./components/States/Gallery";
 
 const PRODUCTS = [
@@ -42,6 +44,9 @@ function App() {
                             <li>
                                 <Link to="states">states</Link>
                             </li>
+                            <li>
+                                <Link to="states-as-snapshot">states-as-snapshot</Link>
+                            </li>
                         </ul>
                     }
                 />
@@ -66,6 +71,15 @@ function App() {
                     element={
                         <HomeButtonWrapper>
                             <Gallery />
+                        </HomeButtonWrapper>
+                    }
+                />
+                <Route
+                    path="states-as-snapshot"
+                    element={
+                        <HomeButtonWrapper>
+                            <Counter />
+                            <Form />
                         </HomeButtonWrapper>
                     }
                 />
