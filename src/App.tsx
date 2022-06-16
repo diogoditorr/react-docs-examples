@@ -7,6 +7,7 @@ import Toolbar from "./components/RespondingToEvents/Toolbar";
 import Counter from "./components/StateAsSnapshot/Counter";
 import Form from "./components/StateAsSnapshot/Form";
 import Gallery from "./components/States/Gallery";
+import Form2 from "./components/ReactingToInputWithState/Form";
 
 const PRODUCTS = [
     { category: "Fruits", price: "$1", stocked: true, name: "Apple" },
@@ -39,13 +40,22 @@ function App() {
                                 <Link to="filter-table">filter-table</Link>
                             </li>
                             <li>
-                                <Link to="responding-events">responding-events</Link>
+                                <Link to="responding-events">
+                                    responding-events
+                                </Link>
                             </li>
                             <li>
                                 <Link to="states">states</Link>
                             </li>
                             <li>
-                                <Link to="states-as-snapshot">states-as-snapshot</Link>
+                                <Link to="states-as-snapshot">
+                                    states-as-snapshot
+                                </Link>
+                            </li>
+                            <li>
+                                <Link to="reacting-to-input-with-state">
+                                    reacting-to-input-with-state
+                                </Link>
                             </li>
                         </ul>
                     }
@@ -80,6 +90,16 @@ function App() {
                         <HomeButtonWrapper>
                             <Counter />
                             <Form />
+                        </HomeButtonWrapper>
+                    }
+                />
+                <Route
+                    path="reacting-to-input-with-state"
+                    element={
+                        <HomeButtonWrapper>
+                            <Form2 />
+                            <Form2 />
+                            <Form2 />
                         </HomeButtonWrapper>
                     }
                 />
