@@ -8,6 +8,8 @@ import Counter from "./components/StateAsSnapshot/Counter";
 import Form from "./components/StateAsSnapshot/Form";
 import Gallery from "./components/States/Gallery";
 import Form2 from "./components/ReactingToInputWithState/Form";
+import Page from "./components/PassingDataDeeplyWithContext/Page";
+import ProfilePage from "./components/PassingDataDeeplyWithContext/ProfilePage";
 
 const PRODUCTS = [
     { category: "Fruits", price: "$1", stocked: true, name: "Apple" },
@@ -57,6 +59,11 @@ function App() {
                                     reacting-to-input-with-state
                                 </Link>
                             </li>
+                            <li>
+                                <Link to="passing-data-deeply-with-context">
+                                    passing-data-deeply-with-context
+                                </Link>
+                            </li>
                         </ul>
                     }
                 />
@@ -100,6 +107,15 @@ function App() {
                             <Form2 />
                             <Form2 />
                             <Form2 />
+                        </HomeButtonWrapper>
+                    }
+                />
+                <Route
+                    path="passing-data-deeply-with-context"
+                    element={
+                        <HomeButtonWrapper>
+                            <Page />
+                            <ProfilePage />
                         </HomeButtonWrapper>
                     }
                 />
