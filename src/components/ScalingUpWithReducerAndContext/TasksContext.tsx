@@ -1,6 +1,6 @@
 import React, { createContext, useContext, useReducer } from "react";
 
-export type Task = {
+export type TypeTask = {
     id: number;
     text: string;
     done: boolean;
@@ -8,14 +8,14 @@ export type Task = {
 
 type Action =
     | { type: "added"; id: number; text: string }
-    | { type: "changed"; task: Task }
+    | { type: "changed"; task: TypeTask }
     | { type: "deleted"; id: number };
 
 type TasksProviderProps = {
     children: React.ReactNode;
 };
 
-const TasksContext = createContext<Task[]>([]);
+const TasksContext = createContext<TypeTask[]>([]);
 const TasksDispatchContext = createContext<React.Dispatch<Action>>(() => null);
 
 export function TasksProvider({ children }: TasksProviderProps) {
@@ -38,7 +38,7 @@ export function useTasksDispatch() {
     return useContext(TasksDispatchContext);
 }
 
-function tasksReducer(tasks: Task[], action: Action) {
+function tasksReducer(tasks: TypeTask[], action: Action) {
     switch (action.type) {
         case "added": {
             return [

@@ -10,6 +10,7 @@ import Gallery from "./components/States/Gallery";
 import Form2 from "./components/ReactingToInputWithState/Form";
 import Page from "./components/PassingDataDeeplyWithContext/Page";
 import ProfilePage from "./components/PassingDataDeeplyWithContext/ProfilePage";
+import TaskApp from "./components/ScalingUpWithReducerAndContext/TaskApp";
 
 const PRODUCTS = [
     { category: "Fruits", price: "$1", stocked: true, name: "Apple" },
@@ -64,6 +65,11 @@ function App() {
                                     passing-data-deeply-with-context
                                 </Link>
                             </li>
+                            <li>
+                                <Link to="scaling-up-with-reducer-and-context">
+                                    scaling-up-with-reducer-and-context
+                                </Link>
+                            </li>
                         </ul>
                     }
                 />
@@ -116,6 +122,14 @@ function App() {
                         <HomeButtonWrapper>
                             <Page />
                             <ProfilePage />
+                        </HomeButtonWrapper>
+                    }
+                />
+                <Route
+                    path="scaling-up-with-reducer-and-context"
+                    element={
+                        <HomeButtonWrapper>
+                            <TaskApp />
                         </HomeButtonWrapper>
                     }
                 />
