@@ -11,6 +11,7 @@ import Form2 from "./components/ReactingToInputWithState/Form";
 import Page from "./components/PassingDataDeeplyWithContext/Page";
 import ProfilePage from "./components/PassingDataDeeplyWithContext/ProfilePage";
 import TaskApp from "./components/ScalingUpWithReducerAndContext/TaskApp";
+import Video from "./components/SynchronizingWithEffects/VideoPlayer";
 
 const PRODUCTS = [
     { category: "Fruits", price: "$1", stocked: true, name: "Apple" },
@@ -68,6 +69,11 @@ function App() {
                             <li>
                                 <Link to="scaling-up-with-reducer-and-context">
                                     scaling-up-with-reducer-and-context
+                                </Link>
+                            </li>
+                            <li>
+                                <Link to="synchronizing-with-effects">
+                                    synchronizing-with-effects
                                 </Link>
                             </li>
                         </ul>
@@ -130,6 +136,14 @@ function App() {
                     element={
                         <HomeButtonWrapper>
                             <TaskApp />
+                        </HomeButtonWrapper>
+                    }
+                />
+                <Route
+                    path="synchronizing-with-effects"
+                    element={
+                        <HomeButtonWrapper>
+                            <Video />
                         </HomeButtonWrapper>
                     }
                 />
