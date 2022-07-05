@@ -3,7 +3,7 @@ import React, { useRef, useState } from "react";
 export default function Stopwatch() {
     const [startTime, setStartTime] = useState<number | null>(null);
     const [now, setNow] = useState<number | null>(null);
-    const intervalRef = useRef(null);
+    const intervalRef = useRef<number>();
 
     function handleStart() {
         setStartTime(Date.now());
