@@ -1,4 +1,3 @@
-import React from "react";
 import { getFinalState } from "./processQueue";
 
 function increment(n: number) {

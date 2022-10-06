@@ -1,4 +1,3 @@
-import React from "react";
 import TaskList from "./TaskList";
 import AddTask from "./AddTask";
 import { TasksProvider } from "./TasksContext";

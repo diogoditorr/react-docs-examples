@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { sculptureList } from "./data";
 
 export default function Gallery() {

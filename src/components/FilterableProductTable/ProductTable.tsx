@@ -1,4 +1,4 @@
-import React, { ReactNode } from "react";
+import { ReactNode } from "react";
 import { Product } from "../../App";
 import ProductCategoryRow from "./ProductCategoryRow";
 import ProductRow from "./ProductRow";

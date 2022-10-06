@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 
 const initialList = [
     { id: 0, title: "Big Bellies" },

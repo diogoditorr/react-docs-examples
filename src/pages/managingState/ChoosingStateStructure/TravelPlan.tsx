@@ -1,4 +1,3 @@
-import React from "react";
 import { useImmer } from "use-immer";
 import { useState } from "react";
 import { initialTravelPlan } from "./places.js";

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 
 const initialShapes = [
     { id: 0, type: "circle", x: 50, y: 100 },

@@ -1,5 +1,5 @@
 import { useImmer } from "use-immer";
-import React from 'react';
+import * as React from 'react';
 
 export default function FormWithImmer() {
     const [person, updatePerson] = useImmer({

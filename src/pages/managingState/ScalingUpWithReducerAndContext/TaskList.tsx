@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { TypeTask, useTasks, useTasksDispatch } from "./TasksContext";
 
 export default function TaskList() {

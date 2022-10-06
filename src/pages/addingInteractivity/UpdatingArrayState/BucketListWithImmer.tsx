@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { useImmer } from "use-immer";
 
 const nextId = 3;

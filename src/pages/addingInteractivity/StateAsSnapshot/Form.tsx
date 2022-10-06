@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import { useState } from "react";
+import * as React from "react";
 
 export default function Form() {
     const [to, setTo] = useState("Alice");

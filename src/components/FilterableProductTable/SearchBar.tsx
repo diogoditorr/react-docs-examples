@@ -1,5 +1,3 @@
-import React from "react";
-
 type Props = {
     filterText: string;
     inStockOnly: boolean;
