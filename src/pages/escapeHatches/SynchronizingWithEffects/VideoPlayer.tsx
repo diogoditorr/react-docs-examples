@@ -6,13 +6,13 @@ type Props = {
 };
 
 function VideoPlayer({ src, isPlaying }: Props) {
-    const ref = useRef(null);
+    const ref = useRef<HTMLVideoElement>(null);
 
     useEffect(() => {
         if (isPlaying) {
-            ref.current.play();
+            ref.current?.play();
         } else {
-            ref.current.pause();
+            ref.current?.pause();
         }
     }, [isPlaying]);
 

@@ -2,15 +2,15 @@ import React from "react";
 import { Link, Route, Routes } from "react-router-dom";
 import "./App.css";
 import FilterableProductTable from "./components/FilterableProductTable/FilterableProductTable";
-import Toolbar from "./components/RespondingToEvents/Toolbar";
-import Counter from "./components/StateAsSnapshot/Counter";
-import Form from "./components/StateAsSnapshot/Form";
-import Gallery from "./components/States/Gallery";
-import Form2 from "./components/ReactingToInputWithState/Form";
-import Page from "./components/PassingDataDeeplyWithContext/Page";
-import ProfilePage from "./components/PassingDataDeeplyWithContext/ProfilePage";
-import TaskApp from "./components/ScalingUpWithReducerAndContext/TaskApp";
-import Video from "./components/SynchronizingWithEffects/VideoPlayer";
+import Toolbar from "./pages/addingInteractivity/RespondingToEvents/Toolbar";
+import Counter from "./pages/addingInteractivity/StateAsSnapshot/Counter";
+import Form from "./pages/addingInteractivity/StateAsSnapshot/Form";
+import Gallery from "./pages/addingInteractivity/States/Gallery";
+import Form2 from "./pages/managingState/ReactingToInputWithState/Form";
+import Page from "./pages/managingState/PassingDataDeeplyWithContext/Page";
+import ProfilePage from "./pages/managingState/PassingDataDeeplyWithContext/ProfilePage";
+import TaskApp from "./pages/managingState/ScalingUpWithReducerAndContext/TaskApp";
+import Video from "./pages/escapeHatches/SynchronizingWithEffects/VideoPlayer";
 import { NavBar } from "./components/NavBar";
 
 const PRODUCTS = [
