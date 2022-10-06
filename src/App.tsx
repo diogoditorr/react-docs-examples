@@ -2,7 +2,6 @@ import React from "react";
 import { Link, Route, Routes } from "react-router-dom";
 import "./App.css";
 import FilterableProductTable from "./components/FilterableProductTable/FilterableProductTable";
-import HomeButtonWrapper from "./components/HomeButtonWrapper";
 import Toolbar from "./components/RespondingToEvents/Toolbar";
 import Counter from "./components/StateAsSnapshot/Counter";
 import Form from "./components/StateAsSnapshot/Form";
@@ -12,6 +11,7 @@ import Page from "./components/PassingDataDeeplyWithContext/Page";
 import ProfilePage from "./components/PassingDataDeeplyWithContext/ProfilePage";
 import TaskApp from "./components/ScalingUpWithReducerAndContext/TaskApp";
 import Video from "./components/SynchronizingWithEffects/VideoPlayer";
+import { NavBar } from "./components/NavBar";
 
 const PRODUCTS = [
     { category: "Fruits", price: "$1", stocked: true, name: "Apple" },
@@ -33,120 +33,51 @@ function App() {
     return (
         <div className="App">
             <Routes>
-                <Route
-                    path="/"
-                    element={
-                        <ul>
-                            <li>
-                                <Link to="/">Home</Link>
-                            </li>
-                            <li>
-                                <Link to="filter-table">filter-table</Link>
-                            </li>
-                            <li>
-                                <Link to="responding-events">
-                                    responding-events
-                                </Link>
-                            </li>
-                            <li>
-                                <Link to="states">states</Link>
-                            </li>
-                            <li>
-                                <Link to="states-as-snapshot">
-                                    states-as-snapshot
-                                </Link>
-                            </li>
-                            <li>
-                                <Link to="reacting-to-input-with-state">
-                                    reacting-to-input-with-state
-                                </Link>
-                            </li>
-                            <li>
-                                <Link to="passing-data-deeply-with-context">
-                                    passing-data-deeply-with-context
-                                </Link>
-                            </li>
-                            <li>
-                                <Link to="scaling-up-with-reducer-and-context">
-                                    scaling-up-with-reducer-and-context
-                                </Link>
-                            </li>
-                            <li>
-                                <Link to="synchronizing-with-effects">
-                                    synchronizing-with-effects
-                                </Link>
-                            </li>
-                        </ul>
-                    }
-                />
-                <Route
-                    path="filter-table"
-                    element={
-                        <HomeButtonWrapper>
-                            <FilterableProductTable products={PRODUCTS} />
-                        </HomeButtonWrapper>
-                    }
-                />
-                <Route
-                    path="responding-events"
-                    element={
-                        <HomeButtonWrapper>
-                            <Toolbar />
-                        </HomeButtonWrapper>
-                    }
-                />
-                <Route
-                    path="states"
-                    element={
-                        <HomeButtonWrapper>
-                            <Gallery />
-                        </HomeButtonWrapper>
-                    }
-                />
-                <Route
-                    path="states-as-snapshot"
-                    element={
-                        <HomeButtonWrapper>
-                            <Counter />
-                            <Form />
-                        </HomeButtonWrapper>
-                    }
-                />
-                <Route
-                    path="reacting-to-input-with-state"
-                    element={
-                        <HomeButtonWrapper>
-                            <Form2 />
-                            <Form2 />
-                            <Form2 />
-                        </HomeButtonWrapper>
-                    }
-                />
-                <Route
-                    path="passing-data-deeply-with-context"
-                    element={
-                        <HomeButtonWrapper>
-                            <Page />
-                            <ProfilePage />
-                        </HomeButtonWrapper>
-                    }
-                />
-                <Route
-                    path="scaling-up-with-reducer-and-context"
-                    element={
-                        <HomeButtonWrapper>
-                            <TaskApp />
-                        </HomeButtonWrapper>
-                    }
-                />
-                <Route
-                    path="synchronizing-with-effects"
-                    element={
-                        <HomeButtonWrapper>
-                            <Video />
-                        </HomeButtonWrapper>
-                    }
-                />
+                <Route element={<NavBar />}>
+                    <Route path="/" element={<h1>Home</h1>} />
+                    <Route
+                        path="filter-table"
+                        element={<FilterableProductTable products={PRODUCTS} />}
+                    />
+                    <Route path="responding-events" element={<Toolbar />} />
+                    <Route path="states" element={<Gallery />} />
+                    <Route
+                        path="states-as-snapshot"
+                        element={
+                            <>
+                                <Counter />
+                                <Form />
+                            </>
+                        }
+                    />
+                    <Route
+                        path="reacting-to-input-with-state"
+                        element={
+                            <>
+                                <Form2 />
+                                <Form2 />
+                                <Form2 />
+                            </>
+                        }
+                    />
+                    <Route
+                        path="passing-data-deeply-with-context"
+                        element={
+                            <>
+                                <Page />
+                                <ProfilePage />
+                            </>
+                        }
+                    />
+                    <Route
+                        path="scaling-up-with-reducer-and-context"
+                        element={<TaskApp />}
+                    />
+                    <Route
+                        path="synchronizing-with-effects"
+                        element={<Video />}
+                    />
+                </Route>
             </Routes>
         </div>
     );
